@@ -7,10 +7,9 @@ module.exports = (sequelize) => {
       primaryKey: true,
       defaultValue: DataTypes.UUIDV4
     },
-    name: {
+    forename: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       validate: {
         len: [1, 30] 
       }
@@ -18,12 +17,13 @@ module.exports = (sequelize) => {
     surname: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
       validate: {
         len: [1, 30] 
       }
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         notEmpty: {
@@ -32,8 +32,13 @@ module.exports = (sequelize) => {
         },
       },
     },
+    // image: {
+    //   type: DataTypes.JSON,         //!CHECAR SI NO ES STRING
+    //   allowNull: false,
+    //   defaultValue: "https://i.pinimg.com/564x/b6/b7/c4/b6b7c4d143a708eb4bbc9f589015fe05.jpg"
+    // },
     image: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING,         
       allowNull: false,
     },
     nationality: {
@@ -54,14 +59,14 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING, // Se cambio a STRING en vez de INTERGER porque el valor predeterminado debe ser del mismo tipo que el campo
       validate: {
         isPositive(value) {
-          if (value !== "\\N" && (isNaN(value) || +value <= 0)) throw new Error('The number must be positive');
+          if (value !== "\\N" && (isNaN(value) || value < 0)) throw new Error('The number must be positive');
         }
       },
       defaultValue: "\\N"
     },
-    created: { // Este es para el front en el filtro de db o api
-      type: DataTypes.BOOLEAN, 
-      defaultValue: true
+    createDB: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
     },
   }, { timestamps: false });
 };
