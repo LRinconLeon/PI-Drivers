@@ -32,15 +32,15 @@ module.exports = (sequelize) => {
         },
       },
     },
-    // image: {
-    //   type: DataTypes.JSON,         //!CHECAR SI NO ES STRING
-    //   allowNull: false,
-    //   defaultValue: "https://i.pinimg.com/564x/b6/b7/c4/b6b7c4d143a708eb4bbc9f589015fe05.jpg"
-    // },
     image: {
-      type: DataTypes.STRING,         
+      type: DataTypes.JSON,         //!CHECAR SI NO ES STRING
       allowNull: false,
+      defaultValue: "https://i.pinimg.com/564x/b6/b7/c4/b6b7c4d143a708eb4bbc9f589015fe05.jpg"
     },
+    // image: {
+    //   type: DataTypes.STRING,         
+    //   allowNull: false,
+    // },
     nationality: {
       type: DataTypes.STRING,
       allowNull: false,

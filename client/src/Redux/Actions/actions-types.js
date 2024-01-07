@@ -1,0 +1,11 @@
+export const GET_DRIVERS = 'GET_DRIVERS';
+export const GET_BY_NAME = 'GET_BY_NAME';
+export const GET_BY_ID = 'GET_BY_ID';
+export const GET_TEAMS = 'GET_TEAMS';
+export const POST_DRIVER = 'POST_DRIVER';
+export const FILTER_BY_TEAM = 'FILTER_BY_TEAM';
+export const FILTER_BY_SOURCE = 'FILTER_BY_SOURCE';
+export const ORDER_BY_ABC = 'ORDER_BY_ABC';
+export const ORDER_BY_DOB = 'ORDER_BY_DOB';
+export const PAGINATION = 'PAGINATION';
+export const RESTART = 'RESTART';

@@ -24,10 +24,16 @@ const _getDrivers = async (name) => {
         image: driver.image.url || defaultImage,
         nationality: driver.nationality,
         dob: driver.dob,
-        Teams: driver.teams, //! Teams o teams
+        Teams: (driver.teams ? driver.teams.split(",") : ["Unknown"]).map((team) => ({ //se separa (split(", ")) para que en el front lo juntes con join(", ")
+            "name": team, //aqui el team de la API me devolvera [{"name": " Mercedes"}] para q sea igual que el team del driver de la bdd
+        })),  // o si es undefined sera unknown
         number: driver.number,
         createDB: false,
     }));
+    // Teams: driver.teams?.split(",").map((team) => ({ //se separa para que en el front lo juntes con join(", ")
+    //         "name": team
+    //     })), //aqui el team de la API me devolvera [{"name": " Mercedes"}] para q sea igual que el team del driver de la bdd
+        
 
     drivers = [...driversDB, ...driversAPI];
 
