@@ -101,7 +101,7 @@ export const changePage = (order) => {
         }
     };
 };
-// ORDER: Es la direccion de la paginacion '<<' o '>>'
+// ORDER: Es la direccion de la paginacion "prev" o "next"
 
 export const restart = () => {
     return async (dispatch) => {
