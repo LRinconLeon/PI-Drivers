@@ -1,15 +1,39 @@
-.navBar {
+.navBar, .navHome {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    border-radius: 15px;
-    border: 1px solid black;
+    align-items: center;
+    background-color: #dc2f02;
+    color: white;
+    font-family: 'Formula Condensed', sans-serif;
+    padding: 10px;
 }
 
-.navHome {
+.navBar a, .navHome a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.img {
+    width: 100px;
+    position: absolute;
+    top: 7px;
+    left: 50px;
+}
+
+.createDriverLink {
+    background-color: #9b9b9b;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-radius: 15px;
-    border: 1px solid black;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.createDriverLink:hover {
+    background-color: #202021;
+    color: white;
 }

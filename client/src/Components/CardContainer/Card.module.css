@@ -7,6 +7,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(249, 9, 9, 0.842);
+    border-color: #dc2f02;
 }
 
 .image {
@@ -14,4 +22,25 @@
     width: 100%;
     margin-bottom: 15px;
     border-radius: 15px 15px 0 0;
+}
+.name {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #dc2f02;
+    color: white;
+    padding: 10px;
+    border-color: #dc2f02;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f99c92;
+    color: black;
+    border-color: #dc2f02;
+    transform: scale(1.05);
 }

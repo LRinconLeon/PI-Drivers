@@ -23,7 +23,7 @@ function App() {
                             <Form />
                         </React.Fragment> } />
                                    
-                    <Route path='/detail:id' element={
+                    <Route path='/detail/:id' element={
                         <React.Fragment>
                             <NavBar />
                             <Detail />

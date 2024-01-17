@@ -1,0 +1,50 @@
+.divContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url('../../images/verstapenDriving.jpg');
+    background-size: 100%;
+    background-position: center;
+    font-family:  sans-serif, Arial, Helvetica;
+    color: white;
+    border-color: #ffffff;
+}
+
+.divTop {
+    background-color: rgba(28, 28, 28, 0.8);
+    border-color: rgba(28, 28, 28, 0.8);
+    border-radius: 5px;
+    margin-right: 900px;
+    height: 200px;
+    width:  500px;
+    text-align: center;
+}
+
+.divButtom {
+    background-color: rgba(28, 28, 28, 0.8);
+    border-color: rgba(28, 28, 28, 0.8);
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-right: 900px;
+    height: 75px;
+    width:  400px;
+    text-align: center;
+}
+.btn{
+    background-color: rgb(242, 46, 46);
+    border-color: red;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-right: 900px;
+    height: 35px;
+}
+
+.img {
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+}

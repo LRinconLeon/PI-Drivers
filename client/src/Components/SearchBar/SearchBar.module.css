@@ -1,0 +1,35 @@
+.mainContainer {
+    margin-right: 20px;
+    /* Ajusta el margen para separar la barra de búsqueda del resto */
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+.btnBar {
+    padding: 8px 12px;
+    background-color: #202021;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnBar:hover {
+    background-color: #9b9b9b;
+}

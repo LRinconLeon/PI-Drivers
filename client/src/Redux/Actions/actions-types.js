@@ -9,3 +9,4 @@ export const ORDER_BY_ABC = 'ORDER_BY_ABC';
 export const ORDER_BY_DOB = 'ORDER_BY_DOB';
 export const PAGINATION = 'PAGINATION';
 export const RESTART = 'RESTART';
+export const CLEAN_DETAIL = 'CLEAN_DETAIL';

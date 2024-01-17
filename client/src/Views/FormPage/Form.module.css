@@ -1,0 +1,65 @@
+.formContainer {
+    display: flex;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    overflow: hidden; /* Para evitar bordes redondeados en los elementos hijos */
+}
+.dadContainer {
+    background-color: #ffffff;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+
+.titleContainer {
+    width: 50%;
+    margin-left: 39%;
+}
+
+.achetres{
+    margin-left: 25%
+}
+
+.formInputs form {
+    margin-top: 12px;
+    margin-left: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.imgContainer {
+    background-color: rgb(185, 185, 187);
+    width: 50%;
+}
+.divPrev{
+    margin-left: 15%;
+}
+
+.formErrors {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.imgCreate{
+    width: 400px;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    
+}
+
+.submitBtn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #dc2f02;
+    color: white;
+    padding: 10px;
+    border-color: #dc2f02;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}

@@ -15,13 +15,14 @@ const SearchBar = () => {
     const submitHandle = (event) => {
         event.preventDefault();
         dispatch(getByName(name));
+        setName("");
     };
 
     return (
         <div className={style.mainContainer}>
             <form onSubmit={submitHandle}>
-                <input type="text" id="searchInput" onChange={inputHandle} placeholder="Search by Name" />
-                <input type="submit" onClick={submitHandle} />
+                <input type="text" value={name} onChange={inputHandle} placeholder="Search by Name" />
+                <button className={style.btnBar} type="submit">Search</button>
             </form>
         </div>
     )

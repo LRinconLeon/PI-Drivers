@@ -6,8 +6,8 @@ import SearchBar from "../SearchBar/SearchBar";
 const NavBar = () => {
     return(
         <div className={style.navBar}>
-            <Link to='/home'>HOME</Link>
-            <Link to='/'>LANDING</Link>
+            <Link to='/'><img className={style.img} src="https://www.thedesignfrontier.com/wp-content/uploads/2019/05/f1-logo-big.png" alt="f1" /></Link>
+            <Link to='/home' className={style.createDriverLink}>HOME</Link>
         </div>
     )
 };
@@ -15,10 +15,9 @@ const NavBar = () => {
 const NavBarHome = () => {
     return(
         <div className={style.navHome}>
-            <Link to='/'>LANDING</Link>
+            <Link to='/'><img className={style.img} src="https://www.thedesignfrontier.com/wp-content/uploads/2019/05/f1-logo-big.png" alt="f1" /></Link>
             <SearchBar />
-            <Link to='/create'>FORM</Link>
-            <Link to='/home'>HOME</Link>
+            <Link to='/create' className={style.createDriverLink}>CREATE YOUR OWN DRIVER</Link>
         </div>
     )
 };

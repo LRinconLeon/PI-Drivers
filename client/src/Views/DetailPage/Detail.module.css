@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+
+.cardContainer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.img {
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.information {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.loading {
+    font-size: 18px;
+    color: #dc2f02;
+    /* Color característico de la F1 */
+}

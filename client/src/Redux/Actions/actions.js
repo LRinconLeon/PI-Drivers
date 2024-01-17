@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_DRIVERS, GET_BY_NAME, GET_TEAMS, FILTER_BY_TEAM, FILTER_BY_SOURCE, RESTART, ORDER_BY_ABC, ORDER_BY_DOB, PAGINATION } from "./actions-types";
+import { GET_DRIVERS, GET_BY_NAME, GET_TEAMS, FILTER_BY_TEAM, FILTER_BY_SOURCE, RESTART, ORDER_BY_ABC, ORDER_BY_DOB, PAGINATION, GET_BY_ID, CLEAN_DETAIL } from "./actions-types";
 
 const URL = "http://localhost:3001";
 
@@ -30,6 +30,27 @@ export const getByName = (name) => {
         }
     };
 };
+
+export const getDriverById = (id) => {
+    return async (dispatch) => {
+        try {
+            const response = await axios.get(`${URL}/drivers/${id}`);
+            dispatch({
+                type: GET_BY_ID,
+                payload: response.data
+            });
+        } catch(error) {
+            console.log(error.message);
+        }
+    };
+};
+
+export const cleanDetail = () => {
+    return { 
+        type: CLEAN_DETAIL
+    };
+};
+
 
 export const getByTeams = () => {
     return async (dispatch) => {
@@ -79,7 +100,7 @@ export const orderByABC = (order) => {
         payload: order
     };
 };
-// order sera ascendente o descendente
+// order sera a z o z a
 
 export const orderByDOB = (order) => {
     return{
@@ -87,7 +108,7 @@ export const orderByDOB = (order) => {
         payload: order
     };
 };
-// order sera ascendente o descendente
+// order sera higher o lower
 
 export const changePage = (order) => {
     return async (dispatch) => {
@@ -114,4 +135,16 @@ export const restart = () => {
         }
     };
 };
+
+
+// export const postDriver = (newDriver) => {
+//     return async () => {
+//         try {
+//             await axios.post("http://localhost:3001/drivers", newDriver);
+//             alert("The Driver was successfully created!");
+//         } catch(error) {
+//             alert(error.response.data.error);
+//         }
+//     }
+// }
 
